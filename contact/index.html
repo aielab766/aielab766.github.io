@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>AICV Lab - Contact</title>
+	<title>AIE Lab 766 - Contact</title>
 	<meta name="description" content="Contact.">
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="canonical" href="/contact/">
@@ -55,25 +55,29 @@
 
 <h1 id="lab-locations">Lab Locations</h1>
 
-<h2 id="aicv-lab">AICV Lab</h2>
+<h2 id="aicv-lab">AIE Lab</h2>
 <p>Our main 766 Lab is located in Central West building (<strong>Room 766</strong>):</p>
-
-<!-- <div style="position:relative;text-align:right;height:500px;width:100%;">
-  <iframe width="100%" height="500" src="https://maps.google.com/maps?q=J.B.%20Hunt%20Transport%20Services%20Center%20for%20Academic%20Excellence%20(JBHT)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</div> -->
 
 
 <div id="wrapper"></div>
 
 <style>
 	#wrapper{
-		width: 100%;
+		width: 500px;
 		height: 500px;
 	}
 </style>
 
 
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=354c91335b600f2c9793cf3c60bb879f"></script> 
+
+
 <script>
+	//初始化地图插件
+	window.onload = function(){
+		var map = new AMap.Map('wrapper');
+	}
+
 	window.onload = function() {
 		// 创建地图对象，并设置中心点和缩放级别
 		var map = new AMap.Map('wrapper', {
@@ -90,7 +94,7 @@
 		// 在地图中心点打开信息窗体
 		infoWindow.open(map, map.getCenter());
 	}
-</script>
+</script> 
 
 
 <!-- <h2 id="robotic-lab">Robotic Lab</h2>
