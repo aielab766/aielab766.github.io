@@ -73,23 +73,32 @@
 </style>
 
 
-<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=354c91335b600f2c9793cf3c60bb879f"></script> 
-
-
 <script>
-	//初始化地图插件
-	window.onload = function(){
-		var map = new AMap.Map('wrapper');
+	window.onload = function() {
+		// 创建地图对象，并设置中心点和缩放级别
+		var map = new AMap.Map('wrapper', {
+			center: [117.25171186849332,31.863291698648798], // 天安门的经纬度
+			zoom: 13
+		});
+
+		// 创建信息窗体对象，设置信息内容和偏移量
+		var infoWindow = new AMap.InfoWindow({
+			content: '<div style="font-size:14px;">安徽省北斗精准农业信息工程中心</div>',
+			offset: new AMap.Pixel(0, -30)
+		});
+
+		// 在地图中心点打开信息窗体
+		infoWindow.open(map, map.getCenter());
 	}
 </script>
 
 
-<h2 id="robotic-lab">Robotic Lab</h2>
+<!-- <h2 id="robotic-lab">Robotic Lab</h2>
 <p>We are establishing Robotic Lab focuses on robotic control projects, which is located in Bell Engineering Center (<strong>Room 4134C</strong>):</p>
 
 <div style="position:relative;text-align:right;height:500px;width:100%;">
   <iframe width="100%" height="500" src="https://maps.google.com/maps?q=Bell%20Engineering%20Center,%20AR%2072701&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</div>
+</div> -->
 
 </div>
 
